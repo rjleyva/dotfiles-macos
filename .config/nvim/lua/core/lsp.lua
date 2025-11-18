@@ -60,6 +60,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 			vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 		end
+
+		require('lsp.mappings').setup(bufnr)
 	end,
 })
 
