@@ -1,0 +1,8 @@
+indent_type = "Spaces"
+indent_width = 2
+line_length = 120
+column_width = 80
+trailing_comma = false
+quote_style = "AutoPreferSingle"
+sort_tables = true
+preserve_blank_lines = true
