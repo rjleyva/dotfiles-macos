@@ -1,0 +1,27 @@
+[user]
+	name = RJ Leyva
+	email = 244540676+rjleyva@users.noreply.github.com
+
+[core]
+  pager = delta
+	excludesfile = /Users/rjleyva/.gitignore_global
+  editor = nvim
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  side-by-side = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
