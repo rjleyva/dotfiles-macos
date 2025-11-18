@@ -1,0 +1,42 @@
+#:schema https://jj-vcs.github.io/jj/latest/config-schema.json
+
+[user]
+name = "RJ Leyva"
+email = "244540676+rjleyva@users.noreply.github.com"
+
+[ui]
+# Use delta for paging diffs in the terminal
+pager = "delta"
+# Use nvim as the editor for commits, merges, and diff editing
+editor = "nvim"
+relative-timestamps = true
+color = "auto"
+
+# Proper diff-editor to avoid Netrw
+diff-editor = ["nvim", "-d", "$left", "$right", "-c", "wincmd w"]
+
+[diff]
+# Use git-style diffs internally
+format = "git"
+
+[git]
+auto-local-branch = true
+push-branch-prefix = "main"
+
+[snapshot]
+max-new-file-size = "10MiB"
+
+[revset-aliases]
+'mine()' = 'author(email_exact("244540676+rjleyva@users.noreply.github.com"))'
+'recent()' = 'mine() & ~remote_branches()'
+
+[colors]
+"diff removed" = "red"
+"diff added" = "green"
+
+[template-aliases]
+'format_short_id(id)' = 'id.shortest(8)'
+
+# Merge tool config
+[merge-tools.delta]
+program = "delta"
