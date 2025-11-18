@@ -1,8 +1,9 @@
-indent_type = "Spaces"
-indent_width = 2
-line_length = 120
 column_width = 80
-trailing_comma = false
+line_endings = "Unix"
+indent_type = "Tabs"
+indent_width = 2
 quote_style = "AutoPreferSingle"
-sort_tables = true
-preserve_blank_lines = true
+call_parentheses = "Always"
+
+[sort_requires]
+enabled = true
