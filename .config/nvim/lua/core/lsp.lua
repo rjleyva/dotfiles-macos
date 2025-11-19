@@ -20,6 +20,7 @@ vim.lsp.enable({
 	'astro',
 	'cssls',
 	'emmet-langauge-server',
+	'eslint',
 	'lua_ls',
 })
 
