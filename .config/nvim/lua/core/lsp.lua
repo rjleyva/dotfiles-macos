@@ -19,6 +19,7 @@ local ts_inlay_hints = {
 vim.lsp.enable({
 	'astro',
 	'cssls',
+	'emmet-langauge-server',
 	'lua_ls',
 })
 
