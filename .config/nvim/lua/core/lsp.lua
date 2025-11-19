@@ -26,6 +26,7 @@ vim.lsp.enable({
 	'html',
 	'jsonls',
 	'lua_ls',
+	'mappings.lua',
 	'marksman',
 })
 
