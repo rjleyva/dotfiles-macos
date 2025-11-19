@@ -18,6 +18,7 @@ local ts_inlay_hints = {
 
 vim.lsp.enable({
 	'astro',
+	'cssls',
 	'lua_ls',
 })
 
