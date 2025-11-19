@@ -31,6 +31,7 @@ vim.lsp.enable({
 	'pyright',
 	'svelte',
 	'vstsls',
+	'yamlls',
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
