@@ -21,6 +21,7 @@ vim.lsp.enable({
 	'cssls',
 	'emmet-langauge-server',
 	'eslint',
+	'gopls',
 	'lua_ls',
 })
 
