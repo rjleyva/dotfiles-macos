@@ -28,6 +28,7 @@ vim.lsp.enable({
 	'lua_ls',
 	'mappings.lua',
 	'marksman',
+	'pyright',
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
