@@ -23,6 +23,7 @@ vim.lsp.enable({
 	'eslint',
 	'gopls',
 	'graphql',
+	'html',
 	'lua_ls',
 })
 
