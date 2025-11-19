@@ -22,6 +22,7 @@ vim.lsp.enable({
 	'emmet-langauge-server',
 	'eslint',
 	'gopls',
+	'graphql',
 	'lua_ls',
 })
 
