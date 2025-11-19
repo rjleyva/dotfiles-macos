@@ -30,6 +30,7 @@ vim.lsp.enable({
 	'marksman',
 	'pyright',
 	'svelte',
+	'vstsls',
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
