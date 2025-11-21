@@ -19,7 +19,7 @@ local ts_inlay_hints = {
 vim.lsp.enable({
 	'astro',
 	'cssls',
-	'emmet-langauge-server',
+	'emmet-language-server',
 	'eslint',
 	'gopls',
 	'graphql',
@@ -30,7 +30,7 @@ vim.lsp.enable({
 	'marksman',
 	'pyright',
 	'svelte',
-	'vstsls',
+	'vtsls',
 	'yamlls',
 })
 
