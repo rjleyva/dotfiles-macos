@@ -30,7 +30,7 @@ vim.lsp.enable({
 	'marksman',
 	'pyright',
 	'svelte',
-	'vstsls',
+	'vtsls',
 	'yamlls',
 })
 
