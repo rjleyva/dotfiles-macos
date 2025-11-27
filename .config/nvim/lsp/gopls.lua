@@ -1,28 +1,3 @@
---[[
-  gopls LSP configuration (Neovim 0.11.3+)
-
-  Setup process:
-  - Install Go via Homebrew:
-       `brew install go`
-     - This installs the Go compiler, runtime, and standard tools on macOS.
-
-  - Install gopls via Go:
-       `go install golang.org/x/tools/gopls@latest`
-     - Installs gopls into $GOPATH/bin (usually ~/.go/bin)
-     - Ensures gopls version matches your Go version for full feature support.
-
-  - Configure Neovim LSP:
-     - cmd points to the Go-installed gopls:
-         `vim.fn.expand('~/.go/bin/gopls')`
-     - All other settings (codelenses, hints, analyses, experimental flags) are
-       optimized for multi-module projects and large codebases.
-
-  - Summary:
-     - memoryMode = 'DegradeClosed' helps performance for large projects.
-     - `experimentalPostfixCompletions` and `experimentalWorkspaceModule` enhance editor
-       experience with multi-module workspaces.
---]]
-
 local M = {}
 
 M.spec = {
