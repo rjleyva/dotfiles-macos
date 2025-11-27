@@ -1,18 +1,3 @@
---[[
-  GraphQL LSP configuration (Neovim 0.11.3+)
-
-  Notes:
-  - The filetypes 'astro' and 'svelte' are commented out for now because most of my projects do not use GraphQL
-    within these frameworks. Keeping them commented prevents unnecessary LSP processing, false diagnostics, and improves
-    start-up performance.
-
-	-	The documentSelector lines are commented out because, at present, I only want the GraphQL LSP to handle standard
-    .graphql files and JavaScript/TypeScript React files. If a project later uses GraphQL within `.astro,` or `.svelte`
-    files, these lines can be uncommented and adjusted on a per-project basis.
-
-  - Currently commented to avoid scanning unnecessary files.
-]]
-
 local M = {}
 
 M.spec = {

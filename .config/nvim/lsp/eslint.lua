@@ -4,7 +4,6 @@ local M = {}
 local function detect_package_manager()
 	local root = vim.fn.getcwd()
 
-	-- Check for lock files
 	if vim.fn.filereadable(root .. '/pnpm-lock.yaml') == 1 then
 		return 'pnpm'
 	elseif vim.fn.filereadable(root .. '/yarn.lock') == 1 then
