@@ -117,8 +117,9 @@ install_homebrew_package_manager() {
     log_skip "Homebrew shell environment already configured"
   fi
 
-  # Load Homebrew into current session
+  # Load Homebrew into current session and export to subshells
   eval "$($homebrew_prefix/bin/brew shellenv)"
+  export PATH
 
   # Disable analytics and update
   log_step "Updating Homebrew package definitions"
@@ -241,9 +242,29 @@ install_npm_language_servers() {
 }
 
 clone_dotfiles_repository() {
-  if [[ -d "$DOTFILES_DIRECTORY" ]]; then
-    log_skip "dotfiles-macos repository directory already exists"
-    return
+  # Check if we're currently in the correct git repository
+  if git rev-parse --git-dir >/dev/null 2>&1; then
+    local current_remote
+    current_remote=$(git remote get-url origin 2>/dev/null || echo "")
+    if [[ "$current_remote" == *"$DOTFILES_REPOSITORY_URL"* ]] || [[ "$current_remote" == *"$DOTFILES_REPO"* ]]; then
+      log_skip "Already in the correct dotfiles-macos repository"
+      return
+    fi
+  fi
+
+  # Check if target directory exists and is the correct repository
+  if [[ -d "$DOTFILES_DIRECTORY" ]] && [[ -d "$DOTFILES_DIRECTORY/.git" ]]; then
+    pushd "$DOTFILES_DIRECTORY" >/dev/null
+    local existing_remote
+    existing_remote=$(git remote get-url origin 2>/dev/null || echo "")
+    popd >/dev/null
+    if [[ "$existing_remote" == *"$DOTFILES_REPOSITORY_URL"* ]] || [[ "$existing_remote" == *"$DOTFILES_REPO"* ]]; then
+      log_skip "dotfiles-macos repository directory already exists and is correct"
+      return
+    else
+      log_muted "Warning: $DOTFILES_DIRECTORY exists but is not the correct repository"
+      # Could optionally backup/remove the existing directory
+    fi
   fi
 
   log_step "Cloning dotfiles-macos repository from GitHub"
