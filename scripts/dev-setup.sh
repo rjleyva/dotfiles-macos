@@ -220,6 +220,8 @@ install_npm_language_servers() {
     vscode-langservers-extracted
     yaml-language-server
     typescript
+    sql-language-server
+    sql-formatter
   )
 
   log_step "Installing npm language servers and formatters"
