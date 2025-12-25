@@ -21,7 +21,7 @@ M.spec = {
 	settings = {
 		json = {
 			validate = { enable = true },
-			format = { enable = true },
+			format = { enable = false },
 			schemas = require('schemastore').json.schemas(),
 			schemaDownload = { enable = true },
 		},

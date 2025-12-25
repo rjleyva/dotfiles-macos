@@ -24,7 +24,7 @@ M.spec = {
 	settings = {
 		yaml = {
 			validate = true,
-			format = { enable = true },
+			format = { enable = false },
 			hover = true,
 			completion = true,
 			schemaStore = {
