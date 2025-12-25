@@ -22,7 +22,7 @@ M.spec = {
 			completions = true,
 			diagnostics = true,
 			format = {
-				enable = true,
+				enable = false,
 			},
 			plugins = {
 				typescript = {
