@@ -26,6 +26,7 @@ M.spec = {
 			python = { 'isort', 'black' },
 			sh = { 'shfmt' },
 			-- svelte = { 'prettier' },
+			sql = { 'sql-formatter' },
 			typescript = { 'prettier' },
 			typescriptreact = { 'prettier' },
 			yaml = { 'prettier' },
