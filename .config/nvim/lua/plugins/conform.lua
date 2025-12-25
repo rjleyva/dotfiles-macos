@@ -7,7 +7,7 @@ M.spec = {
 
 	opts = {
 		format_on_save = {
-			lsp_format = 'fallback',
+			lsp_format = 'never',
 			timeout_ms = 2000,
 		},
 
@@ -51,7 +51,7 @@ M.spec = {
 						conform.format({
 							async = false,
 							quiet = false,
-							lsp_format = 'fallback',
+							lsp_format = 'never',
 						})
 					end, {
 						buffer = args.buf,
