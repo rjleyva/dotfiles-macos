@@ -29,6 +29,7 @@ vim.lsp.enable({
 	'marksman',
 	'pyright',
 	'svelte',
+	'sql-language-server',
 	'vtsls',
 	'yamlls',
 })
