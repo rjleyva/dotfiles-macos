@@ -144,7 +144,7 @@ M.spec = {
 	},
 
 	config = function(_, opts)
-		require('nvim-treesitter.configs').setup(opts)
+		require('nvim-treesitter').setup(opts)
 
 		-- MDX support
 		vim.filetype.add({
