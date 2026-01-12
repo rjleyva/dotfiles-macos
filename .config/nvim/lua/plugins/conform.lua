@@ -8,7 +8,7 @@ M.spec = {
 	opts = {
 		format_on_save = {
 			lsp_format = 'never',
-			timeout_ms = 2000,
+			timeout_ms = 5000,
 		},
 
 		formatters_by_ft = {
