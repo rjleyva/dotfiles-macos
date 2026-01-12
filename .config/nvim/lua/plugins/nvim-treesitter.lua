@@ -48,6 +48,7 @@ M.spec = {
 				'luadoc',
 				'markdown',
 				'markdown_inline',
+				'python',
 				'svelte',
 				'query',
 				'regex',
