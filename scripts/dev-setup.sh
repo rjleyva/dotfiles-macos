@@ -103,9 +103,20 @@ install_homebrew_package_manager() {
     log_skip "Homebrew package manager already installed"
   else
     start_spinner "Downloading and installing Homebrew package manager"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" >/dev/null 2>&1
-    stop_spinner
-    log_success "Successfully installed Homebrew package manager"
+    if /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
+      stop_spinner
+      # Verify Homebrew installation
+      if command -v brew &>/dev/null; then
+        log_success "Successfully installed Homebrew package manager"
+      else
+        log_muted "Error: Homebrew installation completed but 'brew' command not found"
+        exit 1
+      fi
+    else
+      stop_spinner
+      log_muted "Error: Failed to install Homebrew package manager"
+      exit 1
+    fi
   fi
 
   # Configure shell environment for Homebrew
@@ -121,14 +132,12 @@ install_homebrew_package_manager() {
   eval "$($homebrew_prefix/bin/brew shellenv)"
   export PATH
 
-  # Disable analytics and update
-  log_step "Updating Homebrew package definitions"
-  start_spinner "Disabling analytics and fetching latest package definitions"
+  # Disable analytics
+  log_step "Disabling Homebrew analytics"
   brew analytics off >/dev/null 2>&1
-  brew update >/dev/null 2>&1
-  brew upgrade >/dev/null 2>&1
-  stop_spinner
-  log_success "Successfully updated Homebrew package definitions"
+  log_success "Homebrew analytics disabled"
+
+  # Note: Restart terminal for full Homebrew functionality, then run 'brew update && brew upgrade'
 }
 
 install_command_line_packages() {
@@ -330,7 +339,7 @@ prepare_neovim_environment() {
 }
 
 main() {
-  clear
+  clear 2>/dev/null || true
   log_header "macOS Development Environment Setup"
   printf "\n"
 
