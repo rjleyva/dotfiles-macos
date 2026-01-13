@@ -142,7 +142,7 @@ install_homebrew_package_manager() {
 
 install_command_line_packages() {
   local cli_package_names=(
-    stow node git neovim tmux
+    stow node git gh neovim tmux
     lua-language-server marksman go python pipx
     ripgrep bat black ruff isort codespell shfmt stylua yq
     zoxide zsh-autosuggestions delta zsh-syntax-highlighting
