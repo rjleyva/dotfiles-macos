@@ -5,7 +5,13 @@ fi
 
 # Environment Variables
 export EDITOR="nvim"
-export BAT_THEME="gruvbox-dark"
+# export BAT_THEME="gruvbox-dark"
+
+# JJ Completion
+autoload -U compinit
+compinit
+
+source <(COMPLETE=zsh jj)
 
 # PATH Configuration
 export PATH="$PATH:$HOME/go/bin"
