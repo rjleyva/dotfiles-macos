@@ -20,4 +20,4 @@ context = 3
 
 [colors]
 commit_id = { fg = "green", bg = "#ff1525", bold = true, underline = true }
-change_id = { reverse = true, dim = false, italic = true 
+change_id = { reverse = true, dim = false, italic = true }
