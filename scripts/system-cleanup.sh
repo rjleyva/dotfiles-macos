@@ -153,6 +153,7 @@ remove_system_cache_and_metadata() {
   local system_cache_paths=(
     "$HOME/.cache"
     "$HOME/.DS_Store"
+    "$HOME/.zcompdump"
   )
 
   for system_cache_path in "${system_cache_paths[@]}"; do
