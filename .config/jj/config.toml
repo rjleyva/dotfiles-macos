@@ -7,31 +7,17 @@ email = "244540676+rjleyva@users.noreply.github.com"
 [ui]
 pager = "delta"
 editor = "nvim"
+bookmark-list-sort-keys = ["name"]
+tag-list-sort-keys = ["name"]
 relative-timestamps = true
-color = "auto"
+color = "always"
+diff-formatter = ":git"
+graph.style = "square"
+log-word-wrap = true
 
-diff-editor = ["nvim", "-d", "$left", "$right", "-c", "wincmd w"]
-
-[diff]
-format = "git"
-
-[git]
-auto-local-branch = true
-push-branch-prefix = "main"
-
-[snapshot]
-max-new-file-size = "10MiB"
-
-[revset-aliases]
-'mine()' = 'author(email_exact("244540676+rjleyva@users.noreply.github.com"))'
-'recent()' = 'mine() & ~remote_branches()'
+[diff.git]
+context = 3
 
 [colors]
-"diff removed" = "red"
-"diff added" = "green"
-
-[template-aliases]
-'format_short_id(id)' = 'id.shortest(8)'
-
-[merge-tools.delta]
-program = "delta"
+commit_id = { fg = "green", bg = "#ff1525", bold = true, underline = true }
+change_id = { reverse = true, dim = false, italic = true 
