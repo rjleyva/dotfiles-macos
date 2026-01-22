@@ -1,0 +1,48 @@
+{
+	"plugins": {
+		"conform.nvim": {
+			"rev": "c2526f1cde528a66e086ab1668e996d162c75f4f",
+			"src": "https://github.com/stevearc/conform.nvim"
+		},
+		"gitsigns.nvim": {
+			"rev": "abf82a65f185bd54adc0679f74b7d6e1ada690c9",
+			"src": "https://github.com/lewis6991/gitsigns.nvim"
+		},
+		"mason.nvim": {
+			"rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+			"src": "https://github.com/mason-org/mason.nvim"
+		},
+		"mini.pairs": {
+			"rev": "4089aa6ea6423e02e1a8326a7a7a00159f6f5e04",
+			"src": "https://github.com/echasnovski/mini.pairs"
+		},
+		"mini.pick": {
+			"rev": "7c0a674f620ddc701903b887b2dade836b23ea79",
+			"src": "https://github.com/echasnovski/mini.pick"
+		},
+		"nvim-highlight-colors": {
+			"rev": "e0c4a58ec8c3ca7c92d3ee4eb3bc1dd0f7be317e",
+			"src": "https://github.com/brenoprata10/nvim-highlight-colors"
+		},
+		"nvim-lspconfig": {
+			"rev": "419b082102fa813739588dd82e19a8b6b2442855",
+			"src": "https://github.com/neovim/nvim-lspconfig"
+		},
+		"nvim-surround": {
+			"rev": "1098d7b3c34adcfa7feb3289ee434529abd4afd1",
+			"src": "https://github.com/kylechui/nvim-surround"
+		},
+		"oil.nvim": {
+			"rev": "f55b25e493a7df76371cfadd0ded5004cb9cd48a",
+			"src": "https://github.com/stevearc/oil.nvim"
+		},
+		"schemastore": {
+			"rev": "c508409240bfe3f4c9a519dd62a3be6d508f9547",
+			"src": "https://github.com/SchemaStore/schemastore"
+		},
+		"vague.nvim": {
+			"rev": "fcc283576764474ccfbbcca240797d5d7f4d8a78",
+			"src": "https://github.com/vague2k/vague.nvim"
+		}
+	}
+}
