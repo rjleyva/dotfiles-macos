@@ -142,7 +142,7 @@ vim.lsp.config('lua_ls', {
 
 -- Diagnostics
 vim.diagnostic.config({
-	virtual_lines = true,
+	virtual_lines = false,
 	virtual_text = false,
 	underline = true,
 	update_in_insert = false,
