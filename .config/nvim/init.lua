@@ -36,6 +36,16 @@ vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>cs', vim.cmd.nohlsearch)
 -- Show message history
 vim.keymap.set('n', '<leader>cm', '<cmd>messages<CR>')
+-- Toggle virtual lines display for diagnostics
+vim.keymap.set('n', '<leader>xt', function()
+	local enabled = vim.diagnostic.config().virtual_text
+	vim.diagnostic.config({
+		virtual_text = not enabled,
+	})
+	vim.notify(
+		'Diagnostics virtual text ' .. (enabled and 'disabled' or 'enabled')
+	)
+end)
 
 -- Plugins
 vim.pack.add({
