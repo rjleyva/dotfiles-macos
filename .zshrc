@@ -3,23 +3,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Bob
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+# PATH Configuration
+export PATH="$HOME/go/bin:$PATH"
+
 # Environment Variables
 export EDITOR="nvim"
-# export BAT_THEME="gruvbox-dark"
+
+# Bat
+export BAT_THEME="gruvbox-dark"
 
 # JJ Completion
 autoload -U compinit
 compinit
-
 source <(COMPLETE=zsh jj)
-
-# PATH Configuration
-export PATH="$PATH:$HOME/go/bin"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Powerlevel10k Theme
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
