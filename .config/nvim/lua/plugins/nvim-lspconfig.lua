@@ -1,0 +1,6 @@
+-- vim.pack.add({
+-- 	{ src = 'https://github.com/neovim/nvim-lspconfig' },
+-- })
+--
+-- -- Lsp keymap
+-- vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format)
