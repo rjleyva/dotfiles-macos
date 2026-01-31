@@ -12,36 +12,39 @@ M.spec = {
 	scrollback_lines = 10000,
 
 	colors = {
-		foreground = "#cdcdcd",
-		background = "#141415",
-		cursor_bg = "#cdcdcd",
-		cursor_fg = "#141415",
-		cursor_border = "#cdcdcd",
-		selection_bg = "#405065",
-		selection_fg = "#cdcdcd",
+		background = "#1d2021",
+		foreground = "#ebdbb2",
+
+		cursor_bg = "#ebdbb2",
+		cursor_fg = "#1d2021",
+		cursor_border = "#ebdbb2",
+
+		selection_bg = "#3c3836",
+		selection_fg = "#ebdbb2",
 
 		ansi = {
-			"#141415",
-			"#d8647e",
-			"#7fa563",
-			"#f3be7c",
-			"#6e94b2",
-			"#bb9dbd",
-			"#9bb4bc",
-			"#cdcdcd",
+			"#1d2021",
+			"#cc241d",
+			"#98971a",
+			"#d79921",
+			"#458588",
+			"#b16286",
+			"#689d6a",
+			"#a89984",
 		},
 
 		brights = {
-			"#1c1c24",
-			"#d8647e",
-			"#7fa563",
-			"#f3be7c",
-			"#6e94b2",
-			"#bb9dbd",
-			"#9bb4bc",
-			"#cdcdcd",
+			"#928374",
+			"#fb4934",
+			"#b8bb26",
+			"#fabd2f",
+			"#83a598",
+			"#d3869b",
+			"#8ec07c",
+			"#ebdbb2",
 		},
 	},
 }
 
 return M.spec
+
